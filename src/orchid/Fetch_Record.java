@@ -93,6 +93,10 @@ public class Fetch_Record implements Initializable {
             table_data.getColumns().clear();
             table_data.getItems().clear();
             col_names.clear();
+            /**
+             * ********************************
+             * TABLE COLUMN ADDED DYNAMICALLY * ********************************
+             */
 
             for (int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
                 //We are using non property style for making dynamic table

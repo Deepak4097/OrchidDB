@@ -8,8 +8,10 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
-import oracle.jdbc.pool.OracleConnectionPoolDataSource;
+import java.sql.*;
+import oracle.jdbc.*;
 import oracle.jdbc.pool.OracleDataSource;
+//import oracle.jdbc.pool.OracleDataSource;
 
 public class connection_oracle {
 
@@ -112,8 +114,7 @@ public class connection_oracle {
           
     }
     public String get_DB_connection() throws SQLException {
-        OracleDataSource ds;
-        ds = new oracle.jdbc.pool.OracleDataSource();
+        OracleDataSource ds= new OracleDataSource();
         ds.setDriverType("thin");
         ds.setServerName("localhost");
         ds.setDatabaseName("oracledb");
